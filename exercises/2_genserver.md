@@ -143,7 +143,7 @@ defmodule CounterGenServer do
     pid = GenServer.whereis(CounterGenServer)
 	send(pid, :increment)
   end
-  
+
   @impl true
   def handle_info(:increment, state) do 
     # Here :increment is the message that we sent over
@@ -156,3 +156,5 @@ end
 The state of the GenServer is updated in the returned tuple of all handle_call, handle_cast and handle_info callbacks.
 To update the state, simply update the state field in the tuple that is being returned.
 
+## Links
+- Genserver: [https://hexdocs.pm/elixir/GenServer.html](https://hexdocs.pm/elixir/GenServer.html)
